@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4" />
+      <stop offset="50%" stop-color="#dcfce7" />
+      <stop offset="100%" stop-color="#ecfccb" />
+    </linearGradient>
+    <linearGradient id="favLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <linearGradient id="favSprout" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#65a30d" />
+      <stop offset="100%" stop-color="#84cc16" />
+    </linearGradient>
+    <linearGradient id="favBowl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a" />
+      <stop offset="60%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#134e4a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Squircle Base -->
+  <rect width="512" height="512" rx="120" fill="url(#favBg)" stroke="#86efac" stroke-width="12" />
+
+  <!-- Fresh Leaves & Bowl Icon -->
+  <g transform="translate(256, 256)">
+    <!-- Left Leaf -->
+    <path d="M-8,-15 C-95,-30 -120,-110 -85,-155 C-35,-145 0,-90 -8,-15 Z" fill="url(#favSprout)" />
+    <!-- Right Leaf -->
+    <path d="M8,-15 C95,-35 120,-115 85,-160 C35,-145 0,-90 8,-15 Z" fill="url(#favLeaf)" />
+    <!-- Center Leaf -->
+    <path d="M0,-15 C-40,-85 -30,-160 0,-190 C30,-160 40,-85 0,-15 Z" fill="#16a34a" />
+    <!-- Fresh Toppings -->
+    <circle cx="-55" cy="-28" r="22" fill="#ea580c" />
+    <circle cx="58" cy="-28" r="18" fill="#65a30d" />
+
+    <!-- Bowl Body -->
+    <path d="M-145,-5 L145,-5 C145,95 82,155 0,155 C-82,155 -145,95 -145,-5 Z" fill="url(#favBowl)" />
+    <!-- Bowl Rim -->
+    <rect x="-155" y="-18" width="310" height="24" rx="12" fill="#15803d" />
+    <!-- Bowl Foot -->
+    <rect x="-55" y="158" width="110" height="22" rx="11" fill="#134e4a" />
+  </g>
+</svg>

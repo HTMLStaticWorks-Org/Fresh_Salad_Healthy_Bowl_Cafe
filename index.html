@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERDURE — Fresh Salad &amp; Healthy Bowl Cafe</title>
+  <meta name="description"
+    content="Experience VERDURE, a fresh farm-to-bowl cafe featuring build-your-own salad and warm grain bowls, clean proteins, cold-pressed dressings, and flexible weekly meal plans.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Icon Font -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="has-hero-bg">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="services.html" class="nav-link">Meal Plans</a>
+        <a href="counselors.html" class="nav-link">Menu</a>
+        <a href="blog.html" class="nav-link">Nutrition</a>
+        <a href="contact.html" class="nav-link">Catering</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px;">Login</a>
+      </div>
+
+      <button class="hamburger" aria-label="Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">Our Story</a>
+      <a href="services.html" class="nav-link">Meal Plans</a>
+      <a href="counselors.html" class="nav-link">Menu</a>
+      <a href="blog.html" class="nav-link">Nutrition</a>
+      <a href="contact.html" class="nav-link">Catering</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-actions-row">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-bg hero-bg--center">
+      <div class="hero-bg-media">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=85"
+          alt="VERDURE Fresh Salad & Healthy Bowl Cafe" fetchpriority="high">
+      </div>
+      <div class="container hero-content">
+        <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> 100% Organic &amp; Harvested Daily</span>
+        <h1 class="animate-fade-up delay-1">Craft your daily ritual of <span class="text-gradient">fresh, vibrant nourishment</span>.</h1>
+        <p class="lead animate-fade-up delay-2" style="margin: 0 auto var(--spacing-5); max-width: 680px;">A sunlit farm-to-bowl cafe serving custom-built salads, warm sprouted grain bowls, clean proteins, and cold-pressed botanical dressings blended from scratch every morning.</p>
+        <div class="animate-fade-up delay-3"
+          style="display: flex; gap: var(--spacing-3); justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-7);">
+          <a href="services.html" class="btn btn-primary btn-lg">Start Weekly Meal Plan <i
+              class="ph ph-arrow-right"></i></a>
+          <a href="counselors.html" class="btn btn-outline btn-lg">Explore Menu by Base</a>
+        </div>
+
+        <div class="stat-band animate-fade-up delay-4">
+          <div class="stat-item">
+            <div class="stat-value" data-count-to="45" data-suffix="+">0+</div>
+            <div class="stat-label">Fresh Farm Ingredients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count-to="100" data-suffix="%">0%</div>
+            <div class="stat-label">Scratch Cold-Pressed Oils</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count-to="99" data-suffix=".4%">0%</div>
+            <div class="stat-label">Subscriber Freshness Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+      <div class="container">
+        <p class="trust-label">Celebrated by culinary critics &amp; wellness editors nationwide</p>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-item">Bon App&eacute;tit</span>
+          <span class="marquee-item">Well+Good</span>
+          <span class="marquee-item">Eater</span>
+          <span class="marquee-item">Food &amp; Wine</span>
+          <span class="marquee-item">MindBodyGreen</span>
+          <span class="marquee-item">Vogue Living</span>
+          <span class="marquee-item">Clean Eating</span>
+          <span class="marquee-item">Runner's World</span>
+          <span class="marquee-item">Saveur</span>
+          <span class="marquee-item">Kinfolk Table</span>
+        </div>
+        <div class="marquee-track">
+          <span class="marquee-item">Bon App&eacute;tit</span>
+          <span class="marquee-item">Well+Good</span>
+          <span class="marquee-item">Eater</span>
+          <span class="marquee-item">Food &amp; Wine</span>
+          <span class="marquee-item">MindBodyGreen</span>
+          <span class="marquee-item">Vogue Living</span>
+          <span class="marquee-item">Clean Eating</span>
+          <span class="marquee-item">Runner's World</span>
+          <span class="marquee-item">Saveur</span>
+          <span class="marquee-item">Kinfolk Table</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Bowls Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <h2>Signature Chef-Crafted Bowls</h2>
+          <p>Savor three of our most popular seasonal bowls balanced with crisp greens, warm ancient grains, and clean proteins.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Bowl 1 -->
+          <div class="card service-card animate-fade-up delay-1">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=80"
+                alt="Emerald Kale & Herb Chicken Harvest Bowl" loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-leaf"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>Emerald Kale &amp; Herb Chicken</h3>
+              <p>Massaged organic baby kale and crisp romaine topped with pasture-raised rosemary chicken, Hass avocado, shaved radish, toasted pepitas, and lemon-garlic tahini.
+              </p>
+              <a href="counselors.html" class="service-card-link">
+                Explore bowl &amp; macros <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bowl 2 -->
+          <div class="card service-card animate-fade-up delay-2">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=80"
+                alt="Warm Farro & Wild Alaskan Salmon Bowl"
+                loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-plant"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>Warm Farro &amp; Wild Salmon</h3>
+              <p>Steaming sprouted farro and baby spinach layered with harissa-glazed wild salmon, crispy spiced chickpeas, kalamata olives, sheep's milk feta, and oregano vinaigrette.
+              </p>
+              <a href="counselors.html" class="service-card-link">
+                Explore bowl &amp; macros <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bowl 3 -->
+          <div class="card service-card animate-fade-up delay-3">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80"
+                alt="Forbidden Rice & Miso Sesame Tofu Bowl" loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-bowl-food"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>Forbidden Rice &amp; Miso Tofu</h3>
+              <p>Heirloom black rice and crunchy purple cabbage slaw crowned with caramelized maple-tamari tofu, shelled edamame, pickled ginger, and toasted sesame cashew crema.</p>
+              <a href="counselors.html" class="service-card-link">
+                Explore bowl &amp; macros <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive: Build-Your-Bowl Customizer -->
+    <section class="section has-mesh" id="readiness" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <h2>Build Your Custom Bowl</h2>
+          <p>Select your base, clean protein, seasonal produce, superfood crunch, and scratch-made dressing to preview your bowl's live macro and vitality score.</p>
+        </div>
+
+        <div class="scorecard animate-fade-up delay-1" id="scorecard">
+          <div>
+            <div class="quiz-step" data-metric="academics" data-weight="24">
+              <div class="quiz-q"><span class="q-num">1</span> Choose your organic base foundation:</div>
+              <div class="chip-row" role="group" aria-label="Bowl Base">
+                <button type="button" class="chip" data-value="0.35" aria-pressed="false">Crisp Baby Kale</button>
+                <button type="button" class="chip" data-value="0.6" aria-pressed="false">Tri-Color Quinoa</button>
+                <button type="button" class="chip" data-value="0.85" aria-pressed="false">50/50 Greens &amp; Farro</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Forbidden Black Rice</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="rigor" data-weight="18">
+              <div class="quiz-q"><span class="q-num">2</span> Select your clean protein source:</div>
+              <div class="chip-row" role="group" aria-label="Protein choice">
+                <button type="button" class="chip" data-value="0.4" aria-pressed="false">Maple-Tamari Tofu (28g)</button>
+                <button type="button" class="chip" data-value="0.7" aria-pressed="false">Herb-Roasted Chicken (42g)</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Wild Alaskan Salmon (38g)</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="activities" data-weight="22">
+              <div class="quiz-q"><span class="q-num">3</span> Layer your seasonal veggies &amp; superfoods:</div>
+              <div class="chip-row" role="group" aria-label="Vegetable toppings">
+                <button type="button" class="chip" data-value="0.3" aria-pressed="false">Cucumber &amp; Radish</button>
+                <button type="button" class="chip" data-value="0.65" aria-pressed="false">Roasted Sweet Potato</button>
+                <button type="button" class="chip" data-value="0.85" aria-pressed="false">Hass Avocado &amp; Edamame</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Double Harvest Veggies</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="essays" data-weight="22">
+              <div class="quiz-q"><span class="q-num">4</span> Add artisan crunch &amp; gut-health boosters:</div>
+              <div class="chip-row" role="group" aria-label="Crunch boosters">
+                <button type="button" class="chip" data-value="0.2" aria-pressed="false">Toasted Pepitas</button>
+                <button type="button" class="chip" data-value="0.5" aria-pressed="false">Whipped Feta &amp; Olives</button>
+                <button type="button" class="chip" data-value="0.8" aria-pressed="false">Crispy Spiced Chickpeas</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Superseed Omega Mix</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="timeline" data-weight="14">
+              <div class="quiz-q"><span class="q-num">5</span> Finish with a cold-pressed house dressing:</div>
+              <div class="chip-row" role="group" aria-label="Dressing preference">
+                <button type="button" class="chip" data-value="0.45" aria-pressed="false">Lemon Herb Vinaigrette</button>
+                <button type="button" class="chip" data-value="0.8" aria-pressed="false">Green Goddess Tahini</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Spicy Cashew Miso</button>
+              </div>
+            </div>
+
+            <button type="button" class="quiz-reset"><i class="ph ph-arrow-counter-clockwise"></i> Reset
+              bowl builder</button>
+          </div>
+
+          <aside class="score-panel">
+            <p class="stat-label" style="color: rgba(255,255,255,0.65); margin-bottom: var(--spacing-4);">Bowl Nutrition Index</p>
+
+            <div class="score-dial">
+              <svg width="190" height="190" viewBox="0 0 190 190" role="img" aria-label="Bowl nutrition dial">
+                <defs>
+                  <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4ade80"></stop>
+                    <stop offset="100%" stop-color="#a3e635"></stop>
+                  </linearGradient>
+                </defs>
+                <circle class="dial-track" cx="95" cy="95" r="82" fill="none" stroke-width="12"></circle>
+                <circle class="dial-value" cx="95" cy="95" r="82" fill="none" stroke-width="12"></circle>
+              </svg>
+              <div class="dial-readout">
+                <span class="dial-number">0</span>
+                <span class="dial-caption">Vitality %</span>
+              </div>
+            </div>
+
+            <span class="score-tier">Select your bowl layers</span>
+            <p class="score-note">Pick your favorite base, protein, and toppings to calculate your personalized macro balance and bowl style.</p>
+
+            <div class="score-bars">
+              <div class="score-bar-row" data-bar="academics">
+                <div class="score-bar-label"><span>Protein &amp; Satiety</span><span data-bar-value>0%</span></div>
+                <div class="score-bar"><i></i></div>
+              </div>
+              <div class="score-bar-row" data-bar="activities">
+                <div class="score-bar-label"><span>Micronutrient Density</span><span data-bar-value>0%</span></div>
+                <div class="score-bar"><i></i></div>
+              </div>
+              <div class="score-bar-row" data-bar="essays">
+                <div class="score-bar-label"><span>Prebiotic Fiber &amp; Crunch</span><span data-bar-value>0%</span></div>
+                <div class="score-bar"><i></i></div>
+              </div>
+            </div>
+
+            <a href="services.html" class="btn btn-primary" style="width: 100%;">Add Custom Bowl to Plan</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscriber Stories -->
+    <section class="section" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <h2>Subscriber Reviews &amp; Daily Rituals</h2>
+          <p>See how nutritionists, marathoners, and busy professionals fuel their week with VERDURE.</p>
+        </div>
+        <div class="stories-grid">
+          <!-- Story 1: Sarah M. -->
+          <div class="card story-card animate-fade-up delay-1">
+            <div class="story-card-media">
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80" alt="Emerald Kale & Herb Chicken Bowl" loading="lazy">
+              <div class="story-card-overlay"></div>
+              <span class="story-card-badge">
+                <i class="ph-fill ph-check-circle"></i> Weekly Subscriber
+              </span>
+              <div class="story-card-school">
+                <h4 class="story-school-name">Emerald Kale &amp; Herb Chicken</h4>
+              </div>
+            </div>
+            <div class="story-card-body">
+              <div class="story-author-row">
+                <img src="assets/images/testimonial-avatar-sarah-cs-econ.jpg" alt="Sarah M." class="story-author-avatar"
+                  loading="lazy">
+                <div class="story-author-info">
+                  <h4>Sarah M.</h4>
+                  <p>Holistic Clinical Nutritionist</p>
+                </div>
+              </div>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+              </div>
+              <p class="story-quote">"VERDURE is the only cafe I recommend to clients without hesitation. Zero industrial seed oils, local organic greens that actually snap, and full macro transparency on every bowl."</p>
+            </div>
+          </div>
+
+          <!-- Story 2: James K. -->
+          <div class="card story-card animate-fade-up delay-2">
+            <div class="story-card-media">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="Warm Farro & Wild Salmon Bowl" loading="lazy">
+              <div class="story-card-overlay"></div>
+              <span class="story-card-badge">
+                <i class="ph-fill ph-check-circle"></i> Weekly Subscriber
+              </span>
+              <div class="story-card-school">
+                <h4 class="story-school-name">Warm Farro &amp; Wild Salmon</h4>
+              </div>
+            </div>
+            <div class="story-card-body">
+              <div class="story-author-row">
+                <img src="assets/images/testimonial-avatar-james-robotics.jpg" alt="James K."
+                  class="story-author-avatar" loading="lazy">
+                <div class="story-author-info">
+                  <h4>James K.</h4>
+                  <p>Marathoner &amp; Product Architect</p>
+                </div>
+              </div>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+              </div>
+              <p class="story-quote">"The 5-Bowl Workweek Plan saved me 6 hours of Sunday meal prep. Being able to swap proteins, view exact macros, and pause deliveries in one click from the dashboard is effortless."</p>
+            </div>
+          </div>
+
+          <!-- Story 3: Aisha R. -->
+          <div class="card story-card animate-fade-up delay-3">
+            <div class="story-card-media">
+              <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80" alt="Forbidden Rice & Miso Tofu Bowl"
+                loading="lazy">
+              <div class="story-card-overlay"></div>
+              <span class="story-card-badge">
+                <i class="ph-fill ph-check-circle"></i> Weekly Subscriber
+              </span>
+              <div class="story-card-school">
+                <h4 class="story-school-name">Forbidden Rice &amp; Miso Tofu</h4>
+              </div>
+            </div>
+            <div class="story-card-body">
+              <div class="story-author-row">
+                <img src="assets/images/testimonial-avatar-aisha-intl-relations.jpg" alt="Aisha R."
+                  class="story-author-avatar" loading="lazy">
+                <div class="story-author-info">
+                  <h4>Aisha R.</h4>
+                  <p>Pilates &amp; Movement Studio Founder</p>
+                </div>
+              </div>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+              </div>
+              <p class="story-quote">"The spicy cashew miso dressing and caramelized tofu are addictive in the best way. My afternoon energy slump completely vanished once I switched to VERDURE's grain bowls."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+      <div class="container split-row">
+        <div class="split-media animate-fade-up">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=80" alt="VERDURE Fresh Organic Harvest Ingredients"
+            style="border-radius: var(--radius); box-shadow: var(--shadow);">
+        </div>
+        <div class="split-copy split-copy--center animate-fade-up delay-2">
+          <h2>The Craft of Farm-to-Bowl Nourishment</h2>
+          <p>Founded by an interdisciplinary team of vegetable-forward chefs, regenerative farmers, and registered sports dietitians, VERDURE turns peak-season organic harvests into deeply satisfying daily bowls.</p>
+          <ul
+            style="margin: var(--spacing-4) auto; display: flex; flex-direction: column; align-items: flex-start; width: fit-content; margin-inline: auto; gap: var(--spacing-2); text-align: left;">
+            <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--success); font-size: 1.2rem;"></i> Sourced within 120 miles from certified organic partner farms</li>
+            
+            <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--success); font-size: 1.2rem;"></i> 100% cold-pressed extra-virgin olive &amp; avocado oil dressings</li>
+          </ul>
+          <a href="counselors.html" class="btn btn-outline" style="margin-top: var(--spacing-2);">Explore all bases &amp; proteins</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section has-mesh" style="background: var(--gradient-ink); color: #ffffff;">
+      <div class="container" style="text-align: center; max-width: 820px;">
+        <span class="eyebrow animate-fade-up"
+          style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color: #a3e635;"><span
+            class="eyebrow-dot" style="background: #a3e635;"></span> Prep-Free Weekly Plans &middot; Pause Anytime</span>
+        <h2 class="animate-fade-up delay-1" style="color: #ffffff; margin-bottom: var(--spacing-3);">Ready to eat vibrant every single day?</h2>
+        <p class="lead animate-fade-up delay-2" style="color: rgba(255,255,255,0.82); margin-bottom: var(--spacing-5);">
+          Save up to 20% with a customizable weekly bowl subscription. Choose your bases and proteins, track every macro, and pause or skip deliveries anytime.</p>
+        <div class="animate-fade-up delay-3"
+          style="display: flex; gap: var(--spacing-3); justify-content: center; flex-wrap: wrap;">
+          <a href="services.html" class="btn btn-primary btn-lg">Choose Your Meal Plan <i
+              class="ph ph-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-lg"
+            style="color: #fff; border: 1.5px solid rgba(255,255,255,0.28);">Office &amp; Event Catering</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-3);"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+          <p>A sunlit farm-to-bowl cafe crafting organic salads, warm ancient grain bowls, clean proteins, and cold-pressed dressings for vibrant daily living.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="about.html">Our Story</a>
+            <a href="services.html">Meal Plans</a>
+            <a href="counselors.html">Menu</a>
+            <a href="contact.html">Catering</a>
+            <a href="blog.html">Nutrition</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cafe &amp; Nutrition</h4>
+          <div class="footer-links">
+            <a href="services.html">Weekly Plan Pricing</a>
+            <a href="services.html#faq">Subscription &amp; Dietary FAQs</a>
+            <a href="contact.html#location-map">Cafe Location &amp; Hours</a>
+            <a href="blog.html">Nutrition Journal</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Subscriber Portal</h4>
+          <div class="footer-links">
+            <a href="login.html">Subscriber Login</a>
+            <a href="register.html">Start Subscription</a>
+            <a href="dashboard.html">Subscriber Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDURE Fresh Salad &amp; Healthy Bowl Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

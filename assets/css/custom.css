@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Outfit', sans-serif;
+  --color-brand-blue: #16a34a;
+  --color-brand-blue-hover: #15803d;
+  --color-dark: #132a1e;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism base classes */
+.glass {
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-blue);
+}
+
+/* Text constraints for layout compliance */
+.max-w-heading {
+  max-width: 650px;
+}
+
+.max-w-paragraph {
+  max-width: 540px;
+}
+
+/* Custom glow animations */
+.glow-brand-blue {
+  box-shadow: 0 0 20px rgba(240, 180, 41, 0.2);
+}
+
+.glow-brand-blue-hover:hover {
+  box-shadow: 0 0 30px rgba(240, 180, 41, 0.35);
+}
+
+/* RTL layout helpers */
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Custom font sizes for typography requirements - Sleek & Refined */
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 580;
+  font-size: clamp(1.85rem, 4.2vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.hero-heading {
+  font-family: var(--font-serif);
+  font-weight: 580 !important;
+  font-size: clamp(1.85rem, 4.2vw, 3.5rem) !important;
+  line-height: 1.15;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 540;
+  font-size: clamp(1.4rem, 3.2vw, 2.35rem);
+  line-height: 1.25;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-weight: 540 !important;
+  font-size: clamp(1.4rem, 3.2vw, 2.35rem) !important;
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 520;
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  line-height: 1.3;
+}
+
+.card-heading {
+  font-family: var(--font-serif);
+  font-weight: 520 !important;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem) !important;
+  line-height: 1.3;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  line-height: 1.3;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 410;
+  font-size: 1.05rem !important;
+  line-height: 1.65;
+}
+
+.body-text {
+  font-family: var(--font-sans);
+  font-weight: 410 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.65;
+}
+
+/* Helper styles for rest of spec */
+.subheading-text,
+.lead-text {
+  font-weight: 480 !important;
+  font-size: 1.15rem !important;
+}
+
+button,
+.btn,
+a.bg-gold-accent,
+a.bg-transparent {
+  font-weight: 510;
+}
+
+.button-text {
+  font-weight: 510 !important;
+  font-size: 1rem !important;
+}
+
+label {
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.05em;
+}
+
+input,
+select,
+textarea {
+  font-size: 0.95rem !important;
+}
+
+.text-xs {
+  font-size: 0.925rem !important;
+  line-height: 1.6 !important;
+}
+
+.text-\[10px\],
+.text-\[11px\],
+.text-\[12px\] {
+  font-size: 0.875rem !important;
+}
+
+.nav-link {
+  font-weight: 480 !important;
+}
+
+caption {
+  font-weight: 400;
+}
+
+.caption-text,
+.small-text {
+  font-weight: 400 !important;
+  font-size: 0.925rem !important;
+}
+
+strong,
+b,
+.bold-inline {
+  font-weight: 500 !important;
+}
+
+/* Card hover animation */
+.hover-card-trigger {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card-trigger:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-brand-blue);
+}
+
+/* Active navigation links styling overrides */
+.nav-link.active-nav {
+  color: var(--color-brand-blue) !important;
+  border-color: var(--color-brand-blue) !important;
+}
+
+/* High z-index enforcement for mobile drawer menu */
+#mobile-menu {
+  z-index: 100 !important;
+}
+
+/* Footer typography and spacing overrides for premium legibility */
+footer .text-xs,
+footer p.text-xs,
+footer span.text-xs,
+footer a.text-xs {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Headings inside footer */
+footer h4.text-xs {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  color: var(--color-dark) !important;
+  margin-bottom: 1.25rem !important;
+  display: block;
+}
+
+html.dark footer h4.text-xs {
+  color: #ffffff !important;
+}
+
+/* Separate list items cleanly */
+footer ul.space-y-2 {
+  margin-top: 0.75rem !important;
+}
+
+footer ul.space-y-2 li {
+  margin-bottom: 0.65rem !important;
+}
+
+/* Footer newsletter inputs should keep a balanced text size */
+footer input.text-xs,
+footer button.text-xs {
+  font-size: 0.85rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Back to Top button styling */
+#back-to-top {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 9999px !important;
+  width: 48px !important;
+  height: 48px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+html.dark #back-to-top {
+  background-color: #161616 !important;
+  color: #f3f4f6 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#back-to-top:hover {
+  background-color: var(--color-brand-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--color-brand-blue) !important;
+  transform: translateY(-4px) scale(1.05) !important;
+}
+
+/* Viewport-specific inner hero adjustments for 1024px, 1280px & 1440px+ */
+@media (min-width: 1024px) {
+  .inner-hero {
+    min-height: 52vh !important;
+    padding-top: 9rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inner-hero {
+    min-height: 62vh !important;
+    padding-top: 11rem !important;
+    padding-bottom: 7rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .inner-hero {
+    min-height: 70vh !important;
+    padding-top: 12.5rem !important;
+    padding-bottom: 8.5rem !important;
+  }
+}
+
+/* Header navigation spacing & typography for desktop (1024px, 1280px, 1440px+) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #main-header .max-w-7xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  #main-header nav {
+    display: flex !important;
+    gap: 0.85rem !important;
+    align-items: center !important;
+  }
+
+  #main-header nav a.nav-link {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #main-header nav {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  #main-header nav a.nav-link {
+    font-size: 0.875rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  #main-header nav {
+    gap: 2.25rem !important;
+  }
+
+  #main-header nav a.nav-link {
+    font-size: 0.875rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  #main-header nav {
+    gap: 2.75rem !important;
+  }
+}
+
+/* Footer newsletter input LTR & RTL layout fixes */
+#newsletter-form .relative input[type="email"] {
+  padding-right: 5rem !important;
+  padding-left: 1.25rem !important;
+}
+
+#newsletter-form .relative button[type="submit"] {
+  right: 0.375rem !important;
+  left: auto !important;
+}
+
+html[dir="rtl"] #newsletter-form .relative input[type="email"] {
+  padding-left: 5rem !important;
+  padding-right: 1.25rem !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"] #newsletter-form .relative button[type="submit"] {
+  left: 0.375rem !important;
+  right: auto !important;
+}
+
+/* FAQ Accordion typography & RTL fixes */
+details summary {
+  gap: 1rem !important;
+}
+
+details summary h3 {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+html[dir="rtl"] details summary h3 {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  text-align: right !important;
+}
+
+/* FAQ Interactive Accordion Styles */
+.faq-accordion-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-accordion-item:hover {
+  border-color: rgba(240, 180, 41, 0.45) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(240, 180, 41, 0.12);
+}
+
+.faq-accordion-item:hover .faq-question-text {
+  color: #f0b429;
+}
+
+.faq-question-text {
+  transition: color 0.3s ease;
+}
+
+.faq-icon-box {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-accordion-item:hover .faq-icon-box {
+  background-color: #f0b429 !important;
+  color: #000000 !important;
+  border-color: #f0b429 !important;
+  transform: scale(1.08);
+}
+
+.faq-accordion-item.active {
+  border-color: rgba(240, 180, 41, 0.4) !important;
+  box-shadow: 0 10px 25px -5px rgba(240, 180, 41, 0.08);
+}
+
+.faq-accordion-header .faq-chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+.faq-accordion-item:hover .faq-chevron {
+  color: #f0b429;
+}
+
+.faq-accordion-item.active .faq-chevron {
+  transform: rotate(180deg);
+  color: #f0b429 !important;
+}
+
+.faq-accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.faq-accordion-item.active .faq-accordion-body {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
+
+.faq-accordion-content {
+  overflow: hidden;
+}
+
+.faq-tab-btn.active {
+  background-color: #f0b429 !important;
+  color: #000000 !important;
+  border-color: #f0b429 !important;
+  box-shadow: 0 4px 14px rgba(240, 180, 41, 0.3);
+}
+/* ==========================================================
+   GLOBAL LAYOUT CONSISTENCY
+   One spacing scale for every page & every section:
+   vertical rhythm  -> 4rem (mobile) / 5rem (tablet) / 6rem (desktop)
+   horizontal gutter -> 1rem / 1.5rem / 2rem
+   ========================================================== */
+:root {
+  --section-py: 4rem;
+  --section-px: 1rem;
+  --section-header-gap: 3rem;
+}
+
+@media (min-width: 640px) {
+  :root { --section-px: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  :root { --section-py: 5rem; --section-header-gap: 3.5rem; }
+}
+
+@media (min-width: 1024px) {
+  :root { --section-py: 6rem; --section-px: 2rem; --section-header-gap: 4rem; }
+}
+
+/* Every content section (hero sections excluded) shares identical vertical padding */
+body > section:not(.home-hero):not(.inner-hero) {
+  padding-top: var(--section-py) !important;
+  padding-bottom: var(--section-py) !important;
+}
+
+/* Every section container shares identical horizontal gutters */
+body > section > .max-w-7xl,
+body > section > div > .max-w-7xl,
+body > footer > .max-w-7xl,
+.inner-hero > .max-w-7xl,
+.home-hero > .max-w-7xl,
+.home-hero > .max-w-4xl {
+  padding-left: var(--section-px) !important;
+  padding-right: var(--section-px) !important;
+}
+
+/* Section headers share the same distance to their content */
+body > section > .max-w-7xl > .text-center:first-child {
+  margin-bottom: var(--section-header-gap) !important;
+}
+
+footer {
+  padding-top: var(--section-py) !important;
+  padding-bottom: 2.5rem !important;
+}
+
+/* ==========================================================
+   HOME HERO – Home 1 & Home 2 share the exact same height
+   ========================================================== */
+.home-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-height: 85vh;
+  padding-top: 8rem;
+  padding-bottom: var(--section-py);
+}
+
+@media (min-width: 1024px) {
+  .home-hero {
+    height: max(720px, 90vh);
+    min-height: 0;
+    padding-top: 7.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* ==========================================================
+   PRIMARY CTA BUTTONS
+   ========================================================== */
+.btn-primary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #ffd978 0%, #f0b429 55%, #d99f1e 100%);
+  color: #0a0a0a;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px -8px rgba(240, 180, 41, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -8px rgba(240, 180, 41, 0.7);
+  filter: brightness(1.05);
+}
+
+.btn-primary-cta i { transition: transform 0.3s ease; }
+.btn-primary-cta:hover i { transform: translateX(4px); }
+
+.btn-secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary-cta:hover {
+  border-color: #f0b429;
+  color: #f0b429;
+  background: rgba(240, 180, 41, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Secondary CTA on light surfaces */
+html:not(.dark) .btn-secondary-cta.on-surface {
+  color: #1f2937;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================
+   HOME 2 HERO – split layout visual
+   ========================================================== */
+.hero2-arch {
+  border-radius: 999px 999px 1.5rem 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(240, 180, 41, 0.35);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.8), 0 0 0 10px rgba(240, 180, 41, 0.05);
+}
+
+.hero2-float {
+  background: rgba(18, 18, 18, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.7);
+  animation: hero2Float 6s ease-in-out infinite;
+}
+
+.hero2-float.delay { animation-delay: -3s; }
+
+@keyframes hero2Float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero2-float { animation: none; }
+}
+
+/* ==========================================================
+   PRODUCT CATALOG FILTER
+   ========================================================== */
+.gallery-filter-btn {
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.gallery-filter-btn .filter-count {
+  font-size: 0.7rem;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  padding: 0 0.35rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+html.dark .gallery-filter-btn .filter-count { background: rgba(255, 255, 255, 0.1); }
+
+.gallery-filter-btn:hover { border-color: rgba(240, 180, 41, 0.6); }
+
+.gallery-filter-btn.active {
+  background-color: #f0b429 !important;
+  color: #0a0a0a !important;
+  border-color: #f0b429 !important;
+  box-shadow: 0 8px 22px -6px rgba(240, 180, 41, 0.55);
+  transform: translateY(-2px);
+}
+
+.gallery-filter-btn.active .filter-count { background: rgba(0, 0, 0, 0.15); }
+
+.gallery-item {
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.4s ease;
+}
+
+.gallery-item.is-hidden { display: none !important; }
+
+/* Product ranking / badges */
+.rank-badge {
+  font-family: var(--font-serif);
+  background: linear-gradient(135deg, #ffd978, #f0b429);
+  color: #0a0a0a;
+}
+
+/* ==========================================================
+   EQUAL HERO HEIGHT – About, Products & Recipes
+   Same fixed height per breakpoint so the three heroes match
+   regardless of how much content each one holds.
+   ========================================================== */
+.inner-hero.hero-equal {
+  height: var(--hero-equal-h, 50rem);
+  min-height: 0 !important;
+}
+
+@media (min-width: 640px) {
+  .inner-hero.hero-equal { --hero-equal-h: 36rem; }
+}
+
+@media (min-width: 1024px) {
+  .inner-hero.hero-equal { --hero-equal-h: max(36rem, 52vh); }
+}
+
+@media (min-width: 1280px) {
+  .inner-hero.hero-equal { --hero-equal-h: max(38rem, 62vh); }
+}
+
+@media (min-width: 1400px) {
+  .inner-hero.hero-equal { --hero-equal-h: max(40rem, 70vh); }
+}
+
+/* ==========================================================
+   ABOUT – "The Barware Commitment" spec table
+   Fixed label column so every value starts on the same
+   vertical line (desktop, tablet and 368px mobile).
+   ========================================================== */
+.spec-row {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  column-gap: 0.75rem;
+  align-items: start;
+}
+
+@media (min-width: 640px) {
+  .spec-row { grid-template-columns: 11rem minmax(0, 1fr); column-gap: 1rem; }
+}
+
+.spec-row > span:first-child { text-align: left; }
+
+.spec-value {
+  display: grid;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  column-gap: 0.4rem;
+  align-items: start;
+  text-align: left;
+}
+
+.spec-value > i { line-height: 1.6; }
+
+/* ==========================================================
+   EQUAL-SIZE CTA PAIR (stays inside its card)
+   ========================================================== */
+.cta-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .cta-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.cta-pair > a {
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.9rem 1.25rem;
+  white-space: normal;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   PRODUCTS – card footers (price + Request) never overflow
+   Featured Products (4-col at 1024px) & Premium Collection
+   ========================================================== */
+#featured article > div,
+#premium article > div {
+  min-width: 0;
+}
+
+#featured article .mt-auto,
+#premium article .justify-between {
+  flex-wrap: wrap;
+}
+
+#featured article a[href="enquire.html"],
+#premium article a[href="enquire.html"] {
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #featured article .mt-auto,
+  #premium article .justify-between {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  #featured article .mt-auto > a,
+  #premium article .justify-between > a {
+    width: 100%;
+  }
+
+  #featured article .mt-auto > span,
+  #premium article .justify-between > span {
+    text-align: center;
+  }
+
+  #premium article > div.p-8 {
+    padding: 1.5rem;
+  }
+}

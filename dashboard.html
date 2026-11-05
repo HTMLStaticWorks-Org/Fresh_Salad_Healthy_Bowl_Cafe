@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscriber Dashboard — VERDURE Fresh Salad &amp; Healthy Bowl Cafe</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <div class="dashboard-layout">
+
+    <!-- ===================== Sidebar ===================== -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+      <div class="sidebar-head">
+        <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">
+          <img src="assets/images/testimonial-avatar-james-robotics.jpg" alt="Jordan Ellis">
+        </div>
+        <div>
+          <p class="sidebar-user-name">Jordan Ellis</p>
+          <p class="caption" style="margin: 0;">5-Bowl Plan Subscriber</p>
+        </div>
+      </div>
+
+      <nav class="dashboard-nav">
+        <a href="#overview" class="dashboard-link active">
+          <i class="ph ph-squares-four"></i> Plan Overview
+        </a>
+        <a href="#tickets" class="dashboard-link">
+          <i class="ph ph-bowl-food"></i> Weekly Bowl Plans
+        </a>
+        <a href="#guide" class="dashboard-link">
+          <i class="ph ph-chart-pie-slice"></i> Nutrition &amp; Macros
+        </a>
+        <a href="#schedule" class="dashboard-link">
+          <i class="ph ph-calendar"></i> Deliveries &amp; Pause
+        </a>
+        <a href="#perks" class="dashboard-link">
+          <i class="ph ph-star"></i> Subscriber Perks
+        </a>
+        <a href="#payments" class="dashboard-link">
+          <i class="ph ph-credit-card"></i> Manage Payments
+        </a>
+        <a href="#profile" class="dashboard-link">
+          <i class="ph ph-user-circle"></i> Dietary Profile
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="index.html" class="dashboard-link">
+          <i class="ph ph-sign-out"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Backdrop for drawer -->
+    <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+
+    <!-- ===================== Content ===================== -->
+    <div class="dashboard-content">
+
+      <!-- Top bar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-lead">
+          <button class="icon-btn" id="sidebar-toggle" aria-label="Open menu" aria-controls="dashboard-sidebar" aria-expanded="false">
+            <i class="ph ph-list"></i>
+          </button>
+          <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+            <i class="ph ph-moon"></i>
+          </button>
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL layout">
+            <i class="ph ph-arrows-left-right"></i>
+          </button>
+          <a href="#profile" class="topbar-profile" aria-label="Dietary Profile" title="Jordan Ellis — Dietary Profile">
+            <img src="assets/images/testimonial-avatar-james-robotics.jpg" alt="Jordan Ellis" class="topbar-avatar-img">
+          </a>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+
+        <!-- ===================== Overview ===================== -->
+        <section id="overview" class="dashboard-section animate-fade-up">
+          <h1 class="dashboard-title">Subscriber Plan Overview</h1>
+
+          <div class="dash-card dash-welcome">
+            <div>
+              <span class="dash-eyebrow">Upcoming Delivery &middot; Monday</span>
+              <h2>Welcome back, Jordan</h2>
+              <p>Your next 5-Bowl Workweek box arrives in 2 days &mdash; 7:30 AM Early Bird Doorstep drop. Reusable glass bowl swap is active on your account.</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <span class="pill pill-soft">5-Bowl Plan</span>
+              <a href="#schedule" class="pill pill-solid">Pause or Edit</a>
+            </div>
+          </div>
+
+          <div class="dash-stats">
+            <div class="dash-card dash-stat">
+              <p class="stat-label">Next Bowl Delivery</p>
+              <p class="stat-value">2<span class="stat-unit">days left</span></p>
+            </div>
+            <div class="dash-card dash-stat">
+              <p class="stat-label">Weekly Bowls Selected</p>
+              <p class="stat-value">5<span class="stat-unit">of 5 bowls locked</span></p>
+            </div>
+            <div class="dash-card dash-stat">
+              <p class="stat-label">Weekly Protein Target</p>
+              <p class="stat-value">210g<span class="stat-unit">42g avg / bowl</span></p>
+              <div class="progress-track"><div class="progress-fill" style="width: 88%; background: var(--gradient-accent);"></div></div>
+            </div>
+          </div>
+
+          <div class="dash-columns">
+            <div class="dash-card">
+              <div class="dash-card-head">
+                <span class="dash-card-icon"><i class="ph ph-bowl-food"></i></span>
+                <h3>This Week's Selected Bowl Lineup</h3>
+              </div>
+              <div class="dash-list">
+                <div class="dash-list-item">
+                  <span class="dash-card-icon"><i class="ph ph-leaf"></i></span>
+                  <div>
+                    <h4>Mon &amp; Tue: Harvest Green Goddess (2x)</h4>
+                    <p>Baby Kale &amp; Romaine + Charred Herb Chicken &middot; 540 kcal &middot; 42g Protein.</p>
+                  </div>
+                </div>
+                <div class="dash-list-item">
+                  <span class="dash-card-icon"><i class="ph ph-fish-simple"></i></span>
+                  <div>
+                    <h4>Wed &amp; Thu: Pacific Omega Crunch (2x)</h4>
+                    <p>50/50 Greens &amp; Brown Rice + Wild King Salmon &middot; 620 kcal &middot; 44g Protein.</p>
+                  </div>
+                </div>
+                <div class="dash-list-item">
+                  <span class="dash-card-icon"><i class="ph ph-grains"></i></span>
+                  <div>
+                    <h4>Friday: Mediterranean Sun Grain Bowl (1x)</h4>
+                    <p>Sprouted Quinoa &amp; Farro + Crispy Herb Falafel &middot; 560 kcal &middot; 24g Protein.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-card-head">
+                <span class="dash-card-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <h3>Registered Dietitian Insight</h3>
+              </div>
+              <div class="dash-quote">
+                <blockquote>"Your current weekly bowl lineup delivers 48g of prebiotic plant fiber and over 1,400mg of marine Omega-3s. Adding pumpkin seeds to your Wednesday bowl will boost magnesium for post-training recovery."</blockquote>
+                <cite><i class="ph-fill ph-user-circle"></i> Marcus Chen, MS, RD &middot; Head of Performance Nutrition</cite>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Weekly Bowl Plans ===================== -->
+        <section id="tickets" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Choose Weekly Bowl Plans</h1>
+
+          <div class="dash-card dash-welcome">
+            <div>
+              <span class="dash-eyebrow">Weekly Menu Customizer &middot; Harvest Season 2026</span>
+              <h2>Select Plan Tier &amp; Delivery Window</h2>
+              <p>Customize your weekly bowl count, primary base and protein preferences, and preferred delivery window.</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <span class="pill pill-success"><i class="ph ph-check"></i> Zero-Seed-Oil Guaranteed</span>
+            </div>
+          </div>
+
+          <div style="display: grid; gap: var(--spacing-4);">
+            <!-- Plan Selection Card -->
+            <div class="dash-card">
+              <h3 style="margin-bottom: var(--spacing-4);">Update Weekly Bowl Subscription</h3>
+              
+              <div class="dash-form-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: var(--spacing-4); margin-bottom: var(--spacing-4);">
+                <div class="form-group">
+                  <label class="form-label">Delivery Start Date</label>
+                  <input type="date" class="form-control" value="2026-10-26">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Delivery / Pickup Window</label>
+                  <select class="form-control">
+                    <option selected>Early Bird Doorstep &middot; 7:30 AM (Insulated Drop)</option>
+                    <option>Midday Express Cafe Locker &middot; 12:00 PM</option>
+                    <option>Afternoon Desk Drop &middot; 2:00 PM</option>
+                    <option>Evening Dinner Drop &middot; 6:00 PM</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Weekly Bowl Plan Tier</label>
+                  <select class="form-control">
+                    <option>3-Bowl Starter Plan &middot; $39.00 / wk</option>
+                    <option selected>5-Bowl Workweek Plan &middot; $59.00 / wk</option>
+                    <option>10-Bowl Performance Plan &middot; $108.00 / wk</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Base &amp; Protein Preference</label>
+                  <select class="form-control">
+                    <option>Crisp Leafy Greens + Lean Poultry/Fish</option>
+                    <option selected>50/50 Greens &amp; Sprouted Grains + High Protein</option>
+                    <option>100% Plant-Based Organic Tofu &amp; Tempeh</option>
+                    <option>Low-Carb Cauli-Rice + Double Protein</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="dash-booking-checkout" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-3); padding-top: var(--spacing-4); border-top: 1px solid var(--border);">
+                <div>
+                  <span class="caption" style="display: block;">Weekly Plan Total (Insulated Delivery &amp; Glass Bowl Swap Included)</span>
+                  <span style="font-size: 1.8rem; font-weight: 700; color: var(--accent);">$59.00</span>
+                </div>
+                <button class="btn btn-primary dash-checkout-btn" style="padding: 12px 24px;">Save Weekly Plan &amp; Confirm Bowls</button>
+              </div>
+            </div>
+
+            <!-- Active Bowl Selections List -->
+            <div class="dash-card">
+              <div class="dash-card-head" style="justify-content: space-between; margin-bottom: var(--spacing-3);">
+                <h3>Confirmed Deliveries for This Week (2 Drops)</h3>
+                <span class="pill pill-soft">Confirmed</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: var(--spacing-2);">
+                <li class="dash-pass-item" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-2); padding: var(--spacing-2) 0; border-bottom: 1px solid var(--border);">
+                  <div style="display: flex; align-items: center; gap: var(--spacing-3); min-width: 0; flex: 1 1 200px;">
+                    <i class="ph-fill ph-check-circle" style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;"></i>
+                    <div style="min-width: 0; word-break: break-word;">
+                      <strong>Drop #VRD-8842-A</strong> &mdash; 3x Fresh Bowls (Mon, Tue, Wed)
+                      <p class="caption" style="margin: 0;">Monday &middot; 7:30 AM &middot; Insulated Doorstep Courier</p>
+                    </div>
+                  </div>
+                  <a href="#schedule" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;">Pause / Edit</a>
+                </li>
+                <li class="dash-pass-item" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-2); padding: var(--spacing-2) 0;">
+                  <div style="display: flex; align-items: center; gap: var(--spacing-3); min-width: 0; flex: 1 1 200px;">
+                    <i class="ph-fill ph-check-circle" style="color: var(--success); font-size: 1.2rem; flex-shrink: 0;"></i>
+                    <div style="min-width: 0; word-break: break-word;">
+                      <strong>Drop #VRD-8842-B</strong> &mdash; 2x Fresh Bowls (Thu, Fri)
+                      <p class="caption" style="margin: 0;">Thursday &middot; 7:30 AM &middot; Insulated Doorstep Courier</p>
+                    </div>
+                  </div>
+                  <a href="#schedule" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;">Pause / Edit</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Nutrition & Macros Guide ===================== -->
+        <section id="guide" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Nutrition Info &amp; Macro Tracker</h1>
+
+          <div class="dash-card">
+            <div class="dash-card-head" style="justify-content: space-between; align-items: flex-start;">
+              <div>
+                <h3>Complete Bowl Nutrition &amp; Allergen Breakdown</h3>
+                <p class="caption">Verified Lab Macros &middot; Formulated by Registered Dietitian Marcus Chen, MS, RD</p>
+              </div>
+              <span class="pill pill-soft">100% Seed-Oil Free</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--spacing-4); margin: var(--spacing-4) 0;">
+              <!-- Bowl 1 -->
+              <div style="background: var(--bg-subtle); padding: var(--spacing-3); border-radius: var(--radius); border: 1px solid var(--border);">
+                <span class="caption" style="color: var(--accent); font-weight: 600;">SIGNATURE BOWL 01</span>
+                <h4 style="margin: var(--spacing-1) 0;">Harvest Green Goddess</h4>
+                <p class="caption" style="margin-bottom: var(--spacing-3);">540 kcal &middot; 42g Protein &middot; 28g Net Carbs &middot; 11g Fiber</p>
+                <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; width: 100%;"><i class="ph ph-list-magnifying-glass"></i> Full Nutrition Label</button>
+              </div>
+
+              <!-- Bowl 2 -->
+              <div style="background: var(--bg-subtle); padding: var(--spacing-3); border-radius: var(--radius); border: 1px solid var(--border);">
+                <span class="caption" style="color: var(--accent); font-weight: 600;">SIGNATURE BOWL 02</span>
+                <h4 style="margin: var(--spacing-1) 0;">Pacific Omega Crunch</h4>
+                <p class="caption" style="margin-bottom: var(--spacing-3);">620 kcal &middot; 44g Protein &middot; 34g Net Carbs &middot; 9g Fiber</p>
+                <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; width: 100%;"><i class="ph ph-list-magnifying-glass"></i> Full Nutrition Label</button>
+              </div>
+
+              <!-- Bowl 3 -->
+              <div style="background: var(--bg-subtle); padding: var(--spacing-3); border-radius: var(--radius); border: 1px solid var(--border);">
+                <span class="caption" style="color: var(--accent); font-weight: 600;">SIGNATURE BOWL 03</span>
+                <h4 style="margin: var(--spacing-1) 0;">Mediterranean Sun Grain</h4>
+                <p class="caption" style="margin-bottom: var(--spacing-3);">560 kcal &middot; 24g Protein &middot; 48g Net Carbs &middot; 14g Fiber</p>
+                <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; width: 100%;"><i class="ph ph-list-magnifying-glass"></i> Full Nutrition Label</button>
+              </div>
+
+              <!-- Bowl 4 -->
+              <div style="background: var(--bg-subtle); padding: var(--spacing-3); border-radius: var(--radius); border: 1px solid var(--border);">
+                <span class="caption" style="color: var(--accent); font-weight: 600;">SIGNATURE BOWL 04</span>
+                <h4 style="margin: var(--spacing-1) 0;">Kyoto Miso Sesame Tofu</h4>
+                <p class="caption" style="margin-bottom: var(--spacing-3);">490 kcal &middot; 28g Protein &middot; 36g Net Carbs &middot; 12g Fiber</p>
+                <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; width: 100%;"><i class="ph ph-list-magnifying-glass"></i> Full Nutrition Label</button>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: var(--spacing-3); margin-top: var(--spacing-4); flex-wrap: wrap;">
+              <a href="#" class="btn btn-primary" style="padding: 10px 20px;"><i class="ph ph-download-simple"></i> Download Complete Allergen &amp; Macro Chart (PDF)</a>
+              <a href="counselors.html" class="btn btn-secondary" style="padding: 10px 20px;">Explore Full Menu by Base &amp; Protein</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Deliveries & Pause Controls ===================== -->
+        <section id="schedule" class="dashboard-section animate-fade-up" style="display: none;">
+          <div class="dash-welcome" style="margin-bottom: var(--spacing-5);">
+            <h1 class="dashboard-title" style="margin-bottom: 0;">Delivery Schedule &amp; Pause Controls</h1>
+            <a href="#tickets" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.95rem;">Change Weekly Plan</a>
+          </div>
+
+          <h4 style="text-align: start; margin-bottom: var(--spacing-3);">Upcoming Delivery</h4>
+          <div class="dash-card" style="margin-bottom: var(--spacing-5); border-inline-start: 4px solid var(--accent);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-3);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-3);">
+                <div style="background-color: var(--bg-subtle); border: 1px solid var(--border); width: 60px; height: 60px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <span style="color: var(--accent); font-weight: var(--weight-label); font-size: 0.85rem;">OCT</span>
+                  <span style="font-weight: 600; font-size: 1.4rem; line-height: 1;">26</span>
+                </div>
+                <div>
+                  <h3 style="margin: 0; font-size: 1.2rem; text-align: start;">5-Bowl Workweek Box &middot; Insulated Delivery</h3>
+                  <p class="caption" style="margin: 0;"><i class="ph ph-clock"></i> 7:30 AM &ndash; 8:30 AM &middot; Reusable Glass Bowl Exchange Active</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: var(--spacing-2);">
+                <button class="btn btn-primary" style="padding: 10px 20px;"><i class="ph ph-pause-circle"></i> Pause Delivery</button>
+                <button class="btn btn-secondary" style="padding: 10px 16px;">Skip Week</button>
+              </div>
+            </div>
+          </div>
+
+          <h4 style="text-align: start; margin-bottom: var(--spacing-3);">Past Deliveries</h4>
+          <div class="dash-card" style="opacity: 0.75;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-3);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-3);">
+                <div style="background-color: var(--bg-subtle); border: 1px solid var(--border); width: 60px; height: 60px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <span style="color: var(--text-muted); font-weight: var(--weight-label); font-size: 0.85rem;">OCT</span>
+                  <span style="color: var(--text-muted); font-weight: 600; font-size: 1.4rem; line-height: 1;">19</span>
+                </div>
+                <div>
+                  <h3 style="margin: 0; font-size: 1.2rem; text-align: start;">5-Bowl Workweek Box &middot; Delivered</h3>
+                  <p class="caption" style="margin: 0;">Completed &middot; 5 Glass Bowls Returned &amp; Sanitized</p>
+                </div>
+              </div>
+              <button class="btn btn-secondary" style="padding: 10px 20px;"><i class="ph ph-arrows-clockwise"></i> Reorder Bowls</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Subscriber Perks ===================== -->
+        <section id="perks" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Subscriber Perks &amp; Rewards</h1>
+
+          <div class="dash-card dash-welcome" style="margin-bottom: var(--spacing-4);">
+            <div>
+              <span class="dash-eyebrow">Tier: Green Harvest VIP</span>
+              <h2>Your Subscriber Privileges</h2>
+              <p>Active Weekly Member &middot; Enjoy complimentary cold-pressed elixirs, free toppings, and zero-waste bowl rewards.</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <span class="pill pill-success"><i class="ph-fill ph-check-circle"></i> Active Member</span>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Privilege</th>
+                    <th>Description</th>
+                    <th>Availability</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-role="title" data-label="Privilege" style="font-weight: var(--weight-label);">Free Insulated Courier Delivery</td>
+                    <td data-label="Description">Zero delivery fees on all morning &amp; desk drops</td>
+                    <td data-label="Availability">Mon &ndash; Fri</td>
+                    <td data-label="Status"><span class="pill pill-success">Included</span></td>
+                  </tr>
+                  <tr>
+                    <td data-role="title" data-label="Privilege" style="font-weight: var(--weight-label);">Reusable Glass Bowl Exchange</td>
+                    <td data-label="Description">Airtight borosilicate glass bowls swapped weekly</td>
+                    <td data-label="Availability">Every Delivery</td>
+                    <td data-label="Status"><span class="pill pill-soft">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td data-role="title" data-label="Privilege" style="font-weight: var(--weight-label);">Free Guest Bowl Credits</td>
+                    <td data-label="Description">Send a complimentary signature bowl to a friend</td>
+                    <td data-label="Availability">Any Week</td>
+                    <td data-label="Status"><span class="pill pill-soft">2 of 4 Left</span></td>
+                  </tr>
+                  <tr>
+                    <td data-role="title" data-label="Privilege" style="font-weight: var(--weight-label);">Cafe Smoothie &amp; Elixir Bar Discount</td>
+                    <td data-label="Description">15% off all cold-pressed juices, matcha, and snacks</td>
+                    <td data-label="Availability">In-Cafe &amp; App</td>
+                    <td data-label="Status"><span class="pill pill-success">15% Off</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Manage Payments ===================== -->
+        <section id="payments" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Manage Payments &amp; Billing History</h1>
+
+          <div class="dash-card dash-welcome">
+            <div>
+              <span class="dash-eyebrow">Active Subscription Billing</span>
+              <h2>5-Bowl Workweek Plan ($59/wk)</h2>
+              <p>Payment Method: Visa ending in 4242 &middot; Next weekly charge: Oct 25, 2026</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <span class="pill pill-success"><i class="ph-fill ph-check-circle"></i> Auto-Pay Active</span>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-head">
+              <span class="dash-card-icon"><i class="ph ph-receipt"></i></span>
+              <h3>Transaction Receipts</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Invoice / Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Date">Oct 18, 2026</td>
+                    <td data-role="title" data-label="Description">5-Bowl Workweek Plan &ndash; Weekly Delivery (Oct 19 Box)</td>
+                    <td data-label="Amount">$59.00</td>
+                    <td data-label="Receipt"><a href="#" class="dash-download"><i class="ph ph-download-simple"></i> Download PDF</a></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Date">Oct 11, 2026</td>
+                    <td data-role="title" data-label="Description">5-Bowl Workweek Plan &ndash; Weekly Delivery (Oct 12 Box)</td>
+                    <td data-label="Amount">$59.00</td>
+                    <td data-label="Receipt"><a href="#" class="dash-download"><i class="ph ph-download-simple"></i> Download PDF</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Dietary Profile ===================== -->
+        <section id="profile" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Subscriber Profile &amp; Dietary Preferences</h1>
+
+          <div class="dash-card" style="max-width: 620px;">
+            <form class="validate-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="profile-name">Full Name</label>
+                <input type="text" id="profile-name" name="name" class="form-control" value="Jordan Ellis" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-email">Email Address</label>
+                <input type="email" id="profile-email" name="email" class="form-control" value="jordan@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-pace">Primary Nutrition Goal</label>
+                <select id="profile-pace" class="form-control">
+                  <option>Light &amp; Energizing (400–500 kcal / bowl)</option>
+                  <option selected>High-Protein Athletic Performance (40g+ Protein)</option>
+                  <option>100% Plant-Based &amp; Gut Fiber Focus</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-sensory">Allergens &amp; Dietary Restrictions</label>
+                <select id="profile-sensory" class="form-control">
+                  <option selected>None (100% Seed-Oil Free Standard)</option>
+                  <option>Strict Celiac Gluten-Free Prep Station</option>
+                  <option>Tree Nut &amp; Peanut Free Station</option>
+                  <option>Dairy-Free / Vegan Dressings Only</option>
+                </select>
+              </div>
+              <hr style="border: none; border-top: 1px solid var(--border); margin: var(--spacing-4) 0;">
+              <div class="form-group">
+                <label class="form-label" for="profile-password">Update Password</label>
+                <input type="password" id="profile-password" name="password" class="form-control" placeholder="Leave blank to keep current">
+              </div>
+              <button type="submit" class="btn btn-primary">Save Preferences</button>
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

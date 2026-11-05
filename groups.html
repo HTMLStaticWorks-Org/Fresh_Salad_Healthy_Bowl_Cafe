@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering &amp; Group Bowl Bars — VERDURE Fresh Salad &amp; Healthy Bowl Cafe</title>
+  <meta name="description" content="Order office catering, build-your-own salad bowl bars, corporate wellness meal plans, and private event dining at VERDURE Fresh Salad & Healthy Bowl Cafe.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="services.html" class="nav-link">Meal Plans</a>
+        <a href="counselors.html" class="nav-link">Menu</a>
+        <a href="blog.html" class="nav-link">Nutrition</a>
+        <a href="contact.html" class="nav-link active">Catering</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px;">Login</a>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">Our Story</a>
+      <a href="services.html" class="nav-link">Meal Plans</a>
+      <a href="counselors.html" class="nav-link">Menu</a>
+      <a href="blog.html" class="nav-link">Nutrition</a>
+      <a href="contact.html" class="nav-link active">Catering</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-actions-row">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-hero has-grid">
+      <div class="container" style="text-align: center;">
+        <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> Office Catering &amp; Group Bowl Bars</span>
+        <h1 class="animate-fade-up delay-1">Catering &amp; Corporate Plans</h1>
+        <p class="lead animate-fade-up delay-2" style="max-width: 600px; margin: 0 auto;">Energize your team with interactive build-your-own bowl bars, individually labeled macro boxes, or recurring corporate lunch subscriptions.</p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-6);">
+          
+          <!-- Contact Form -->
+          <div style="flex: 1; min-width: 300px;" class="animate-fade-up delay-1">
+            <div class="card" style="align-items: stretch; text-align: left;">
+              <h3 style="text-align: left; margin-bottom: var(--spacing-4);">Catering &amp; Group Order Inquiry</h3>
+              <!-- Formspree placeholder action -->
+              <form class="validate-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="name">Contact / Organizer Name</label>
+                  <input type="text" id="name" name="name" class="form-control" required placeholder="Office Manager or Event Coordinator">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Company or Organization Email</label>
+                  <input type="email" id="email" name="email" class="form-control" required placeholder="wellness@company.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="grade">Catering Format</label>
+                  <select id="grade" name="grade" class="form-control">
+                    <option value="k12" selected>Build-Your-Own Salad &amp; Grain Bowl Bar (15+ Guests)</option>
+                    <option value="university">Individually Labeled Signature Bowl Boxes</option>
+                    <option value="corporate">Recurring Corporate Weekly Meal Plan Subsidy</option>
+                    <option value="tour">Athletic Team / Fitness Studio Recovery Drop</option>
+                    <option value="community">Private Greenhouse Cafe Evening Buyout</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="message">Headcount, Date &amp; Dietary Notes</label>
+                  <textarea id="message" name="message" class="form-control" rows="4" required placeholder="Estimated number of guests, delivery date/time, and any vegan, gluten-free, or nut-free requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Catering Inquiry</button>
+              </form>
+            </div>
+          </div>
+          <!-- Contact Info -->
+          <div style="flex: 1; min-width: 300px;" class="animate-fade-up delay-2">
+            <h2 style="text-align: start;">Catering Concierge &amp; Cafe</h2>
+            <p style="margin-bottom: var(--spacing-5);">Our catering specialists and corporate nutrition coordinators respond within 4 business hours.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-4); margin-bottom: var(--spacing-5);">
+              <div style="display: flex; align-items: flex-start; gap: var(--spacing-3);">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.5rem;">
+                  <i class="ph-fill ph-envelope"></i>
+                </div>
+                <div>
+                  <h4 style="margin: 0;">Catering &amp; Support Email</h4>
+                  <p style="color: var(--text-muted); margin: 0;">catering@verdurebowls.com</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: flex-start; gap: var(--spacing-3);">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.5rem;">
+                  <i class="ph-fill ph-phone"></i>
+                </div>
+                <div>
+                  <h4 style="margin: 0;">Direct Kitchen Line</h4>
+                  <p style="color: var(--text-muted); margin: 0;">+1 (888) 837-3873 (VERDURE)</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: flex-start; gap: var(--spacing-3);">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.5rem;">
+                  <i class="ph-fill ph-map-pin"></i>
+                </div>
+                <div>
+                  <h4 style="margin: 0;">Flagship Greenhouse Cafe</h4>
+                  <p style="color: var(--text-muted); margin: 0;">The Botanical Conservatory, 740 Greenleaf Ave<br>SoMa Culinary District, CA 94107 (Open Daily 7 AM – 9 PM)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Follow us -->
+            <div class="contact-follow">
+              <p class="trust-label" style="margin-bottom: var(--spacing-3);">Connect with VERDURE</p>
+              <div class="social-follow">
+                <a href="#" aria-label="VERDURE on Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#" aria-label="VERDURE on YouTube"><i class="ph ph-youtube-logo"></i></a>
+                <a href="#" aria-label="VERDURE on TikTok"><i class="ph ph-tiktok-logo"></i></a>
+                <a href="#" aria-label="VERDURE on LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+              </div>
+              <p class="caption" style="margin: var(--spacing-3) 0 0;">Follow our social channels for seasonal harvest drops, chef specials, and macro recipes.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <h2>Catering Frequently Asked Questions</h2>
+          <p>Key information for office managers, athletic directors, and event planners.</p>
+        </div>
+
+        <div class="faq-list animate-fade-up delay-1">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>What is the minimum headcount for Build-Your-Own Bowl Bar catering?</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <p>Our interactive Build-Your-Own Bowl Bars start at 15 guests and scale up to 500+. Each bar includes 3 organic bases, 3 clean proteins, 10 seasonal toppings, 4 house cold-pressed dressings, and compostable bowls and utensils.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Are individual bowls labeled with names, macros, and allergens?</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <p>Yes. For boxed group orders, every team member can submit their custom bowl order via a shared link, and each box arrives printed with their name, ingredient list, macro count, and allergen verification badge.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How do recurring corporate wellness meal subsidies work?</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <p>Companies can subsidize 50% to 100% of their employees' weekly VERDURE Bowl Plans. Bowls are delivered together to your office reception desk each morning or midday with zero individual delivery fees.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Can we book the Botanical Conservatory Cafe for a private evening event?</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <p>Private evening buyouts of our sunlit greenhouse dining room and garden courtyard are available for up to 140 guests, featuring custom farm-to-table tasting menus and cold-pressed botanical mocktail bars.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How do you prevent cross-contamination for catering guests with allergies?</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <p>All catering toppings containing nuts, sesame, or dairy are packaged in separate sealed vessels with dedicated serving tongs, and severe-allergy individual boxes are prepped in our isolated allergen-safe station.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How far in advance should we place a catering order?</span>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <p>Standard group orders up to 50 bowls can be placed up to 24 hours in advance. For events over 50 guests or custom corporate setups, we recommend inquiring 48 to 72 hours ahead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-3);"><img src="assets/images/campusly-logo.svg" alt="VERDURE" class="logo-img"></a>
+          <p>A culinary-forward fresh salad and healthy bowl cafe merging organic local harvests, sustainable proteins, and cold-pressed dressings into vibrant daily nourishment.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="services.html">Meal Plans</a>
+            <a href="counselors.html">Menu</a>
+            <a href="contact.html">Catering</a>
+            <a href="blog.html">Nutrition</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Dietary &amp; Nutrition</h4>
+          <div class="footer-links">
+            <a href="services.html">Weekly Bowl Plans</a>
+            <a href="services.html#faq">Allergen &amp; Macro FAQs</a>
+            <a href="contact.html#location-map">Cafe Location &amp; Hours</a>
+            <a href="blog.html">Nutrition Journal</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Subscriber Portal</h4>
+          <div class="footer-links">
+            <a href="login.html">Subscriber Login</a>
+            <a href="register.html">Start Meal Plan</a>
+            <a href="dashboard.html">Manage Deliveries</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDURE Fresh Salad &amp; Healthy Bowl Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
