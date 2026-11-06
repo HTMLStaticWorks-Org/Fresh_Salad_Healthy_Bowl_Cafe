@@ -18,7 +18,7 @@
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body class="has-hero-bg">
+<body>
 
   <!-- Navigation -->
   <header class="navbar">
@@ -85,34 +85,93 @@
   </div>
 
   <main>
-    <!-- Hero: full-bleed background image -->
-    <section class="hero-bg hero-bg--center">
-      <div class="hero-bg-media">
-        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=85" alt="VERDURE Fresh Grain & Salad Bowls"
-          fetchpriority="high">
-      </div>
-      <div class="container hero-content">
-        <div class="hero-copy">
-          <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> Where Harvest Meets Culinary Craft</span>
-          <h1 class="animate-fade-up delay-1">Transform everyday lunch into <span class="text-gradient">pure vitality</span>.</h1>
-          <p class="lead animate-fade-up delay-2" style="margin-bottom: var(--spacing-5);">An energizing culinary experience featuring organic leafy greens, warm sprouted ancient grains, char-grilled proteins, and cold-pressed dressings crafted to fuel body and mind.</p>
+    <!-- Hero: Split 2-Column Botanical Showcase -->
+    <section class="hero2-split">
+      <div class="container">
+        <div class="hero2-grid">
+          <!-- Left Column: Editorial Headline, Actions & Badges -->
+          <div class="hero2-copy">
+            <span class="hero2-eyebrow animate-fade-up">
+              <i class="ph ph-sparkle"></i> Where Harvest Meets Culinary Craft
+            </span>
+            <h1 class="hero2-title animate-fade-up delay-1">
+              Transform everyday lunch into <span class="hero2-gradient-text">pure vitality</span>.
+            </h1>
+            <p class="hero2-lead animate-fade-up delay-2">
+              An energizing culinary experience featuring organic leafy greens, warm sprouted ancient grains, char-grilled proteins, and cold-pressed dressings crafted to fuel body and mind.
+            </p>
 
-          <div class="hero-stat-pair animate-fade-up delay-3" style="margin-bottom: var(--spacing-5);">
-            <div>
-              <div class="stat-value" data-count-to="45" data-suffix="+ items" style="font-size: 2.3rem;">0+ items</div>
-              <p class="stat-label" style="margin: 0;">Seasonal Farm Bar</p>
+            <div class="hero2-actions animate-fade-up delay-3">
+              <a href="services.html" class="btn btn-primary btn-lg">
+                Start Weekly Bowl Plan <i class="ph ph-arrow-right"></i>
+              </a>
+              <a href="#timeline" class="btn btn-outline btn-lg">Explore the 5 Bowl Steps</a>
             </div>
-            <div class="hero-stat-divider"></div>
-            <div>
-              <div class="stat-value" data-count-to="99" data-suffix=".4%" style="font-size: 2.3rem;">0%</div>
-              <p class="stat-label" style="margin: 0;">Subscriber Delight</p>
+
+            <div class="hero2-features-row animate-fade-up delay-4">
+              <div class="hero2-feature-item">
+                <i class="ph ph-drop"></i> 100% Seed-Oil Free
+              </div>
+              <div class="hero2-feature-item">
+                <i class="ph ph-leaf"></i> 45+ Farm Ingredients
+              </div>
+              <div class="hero2-feature-item">
+                <i class="ph ph-clock-countdown"></i> &lt; 24h Farm to Bowl
+              </div>
+            </div>
+
+            <div class="hero2-stats-card animate-fade-up delay-5">
+              <div class="hero2-stat">
+                <div class="stat-value" data-count-to="45" data-suffix="+ items">0+ items</div>
+                <div class="stat-label">Seasonal Farm Bar</div>
+              </div>
+              <div class="hero2-stat-divider"></div>
+              <div class="hero2-stat">
+                <div class="stat-value" data-count-to="99" data-suffix=".4%">0%+</div>
+                <div class="stat-label">Subscriber Delight</div>
+              </div>
+              <div class="hero2-stat-divider"></div>
+              <div class="hero2-stat">
+                <div class="stat-value" data-count-to="18" data-suffix=" Chef Bowls">0 Chef Bowls</div>
+                <div class="stat-label">Weekly Rotation</div>
+              </div>
             </div>
           </div>
 
-          <div class="hero-actions animate-fade-up delay-4">
-            <a href="services.html" class="btn btn-primary btn-lg">Start Weekly Bowl Plan <i
-                class="ph ph-arrow-right"></i></a>
-            <a href="#timeline" class="btn btn-outline btn-lg">Explore the 5 Bowl Steps</a>
+          <!-- Right Column: Arched Image Showcase with Interactive Floating Badges -->
+          <div class="hero2-visual animate-fade-up delay-2">
+            <div class="hero2-arch-frame">
+              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=85"
+                alt="VERDURE Fresh Sprouted Grain & Salad Bowl" fetchpriority="high">
+            </div>
+
+            <!-- Floating Rating Badge -->
+            <div class="hero2-float-rating" aria-label="Customer Rating">
+              <div class="hero2-rating-stars">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+              </div>
+              <div><strong>4.9 / 5</strong> &middot; 12k+ Active Subscribers</div>
+            </div>
+
+            <!-- Floating Macro Nutrition Badge -->
+            <div class="hero2-float-macro" aria-label="Targeted Macro Nutrition">
+              <div class="hero2-macro-icon">
+                <i class="ph ph-heartbeat"></i>
+              </div>
+              <div class="hero2-macro-info">
+                <div class="hero2-macro-title">42g Clean Protein</div>
+                <div class="hero2-macro-sub">Targeted Macro Profile</div>
+              </div>
+            </div>
+
+            <!-- Floating Organic Seal Badge -->
+            <div class="hero2-float-seal" title="100% Organic & Non-GMO Verified">
+              <i class="ph ph-seal-check"></i>
+            </div>
           </div>
         </div>
       </div>
