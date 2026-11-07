@@ -1099,12 +1099,39 @@ html[dir="rtl"] .story-card-school {
 
 .page-hero {
   position: relative;
+  min-height: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: calc(84px + var(--spacing-7)) 0 var(--spacing-7);
   background:
     radial-gradient(ellipse 60% 70% at 50% -10%, var(--accent-tint) 0%, transparent 60%),
     var(--bg-subtle);
   border-bottom: var(--hairline);
   overflow: hidden;
+}
+
+.page-hero .container {
+  width: 100%;
+}
+
+.page-hero .eyebrow {
+  margin-bottom: var(--spacing-3);
+}
+
+.page-hero h1 {
+  margin-bottom: var(--spacing-3);
+}
+
+.page-hero .lead {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 350px;
+    padding: calc(70px + var(--spacing-5)) 0 var(--spacing-5);
+  }
 }
 
 /* Hero image frame */
